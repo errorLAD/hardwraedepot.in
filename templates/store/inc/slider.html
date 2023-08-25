@@ -1,0 +1,87 @@
+{% load static %}
+
+
+
+<div class="w3-container w3-hide-large w3-hide-medium py-2">
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;">
+  
+    <!-- Automatic Slideshow Images -->
+    <div class="mySlides w3-display-container w3-center">
+      <img src="https://i.postimg.cc/CLG1SdBx/HOMRJERJER.png" style="width:100%">
+    
+    </div>
+    <div class="mySlides w3-display-container w3-center">
+      <img src="https://i.postimg.cc/13XZvfK7/Janeu-BBBB.png" style="width:100%">
+    
+    </div>
+ 
+  </div>
+  </div>
+
+
+<div class="w3-hide-small">
+  <br>
+<div class="swiffy-slider slider-item-show3 slider-item-reveal slider-item-snapstart slider-item-nogap slider-item-reveal slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-nav-page slider-item-snapstart slider-nav-autoplay slider-nav-autopause slider-item-ratio slider-item-ratio-contain slider-item-ratio " data-slider-nav-autoplay-interval="8000">
+  <div class="slider-container">
+      <div>    <img
+        className="d-block w-80"
+        src="https://i.postimg.cc/CLG1SdBx/HOMRJERJER.png"
+        alt="First slide"
+      /></div>
+
+      <div>   <img
+        className="d-block w-100"
+        src="https://i.postimg.cc/13XZvfK7/Janeu-BBBB.png"
+        alt="First slide"
+      /></div>
+      
+      <div>   <img
+        className="d-block w-100"
+        src="https://i.postimg.cc/J02Z48KX/Janeu-16.png"
+        alt="First slide"
+      /></div>
+   
+  </div>
+
+  <button type="button" class="slider-nav" aria-label="Go left"></button>
+  <button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+</div>
+</div>
+
+<script>
+  // Automatic Slideshow - change image every 4 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+  }
+  
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  var modal = document.getElementById('ticketModal');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>

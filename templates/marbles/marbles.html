@@ -1,0 +1,310 @@
+{% extends 'base.html' %}
+
+{% block title %} | Our tiles Inventory {% endblock %}
+{% block content %}
+
+{% load humanize %}
+<!-- Sub banner start -->
+
+
+<div class="w3-row w3-container ">
+
+    <div class="w3-col s8  w3-center w3-hide-small max-w-7xl">
+      <br>
+        <p>
+          <div class="w3-hide-small">
+              <div class="carousel px-20"
+              data-flickity='{ "freeScroll": true, }'>
+                  <!-- Automatic Slideshow Images -->
+          <div class="mySlides w3-display-container w3-center">
+             <img src="https://i.postimg.cc/q7n4t6Mv/Lowest-Rates-SDASDASDADWEWE.png" style="width:80%">
+          <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+         </div>
+         </div>
+          <div class="mySlides w3-display-container w3-center">
+          <img src="https://i.postimg.cc/G90BZ8K8/Lowest-Rates-BBB865-RFIU.png" style="width:80%">
+          <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+         </div>
+         </div>
+          <div class="mySlides w3-display-container w3-center">
+            <img src="https://i.postimg.cc/VLWSv6kw/Lowest-Rates-HHHFF.png" style="width:80%">
+   
+          </div>
+          </div>
+          </div>
+        </p>
+      </div>
+  
+<!--large-->
+<div class="w3-col s12  w3-hide-large w3-hide-medium max-w-7xl">
+  <br><br><br>
+
+      <img src="https://i.postimg.cc/B6xqsyDB/Lowest-Ratesjhhlylgl.png" style="width:120%">
+     
+      
+  </div>
+
+<!--big screen-->
+<div class="">
+    <div class="w3-col s3 w3-container py-2 w3-hide-small">
+      <br><br>
+      <br><br>
+      <div class="py-2 w3-hide-small" style="width: 5rem;">
+        <img class="card-img-top " src="https://i.postimg.cc/Y9Cr2zS2/wqeweqwe-1.png" alt="Card image cap">
+      </div>
+<form action="{% url 'marblesearch' %}" method="" class="w3-hide-small">
+    <div class="mb-2">
+        <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="model">
+            <option selected="true" disabled="disabled">Model</option>
+            {% for model in model_search %}
+              <option value="{{model}}">{{model}}</option>
+            {% endfor %}
+        </select> </div> 
+    <div class="mb-2">
+        <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+        <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="city">
+            <option selected="true" disabled="disabled">Location</option>
+            {% for city in city_search %}
+              <option value="{{city}}">{{city}}</option>
+            {% endfor %}
+        </select> </div> 
+
+                
+    
+    <div class="flex items-start mb-6">
+      <div class="form-group">
+        <button class="w3-black w3-button w3-round w3-block">
+            <i class="fa fa-search"></i> Search
+        </button>
+    </div>
+    </form>
+
+    </div>   
+</div>
+<!--smallscreen-->
+
+  <div class="w3-col s12  w3-hide-large w3-hide-medium max-w-7xl">
+  <div class="py-4" style="width: 5rem;">
+    <img class="card-img-top " src="https://i.postimg.cc/Y9Cr2zS2/wqeweqwe-1.png" alt="Card image cap">
+    
+  </div>
+
+<!--big screen-->
+<form action="{% url 'marblesearch' %}" method="" class="">
+ 
+  <div class="mb-2 ">
+      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="model">
+          <option selected="true" disabled="disabled">Model</option>
+          {% for model in model_search %}
+            <option value="{{model}}">{{model}}</option>
+          {% endfor %}
+      </select> </div> 
+  <div class="mb-2">
+      <label for="confirm_password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"></label>
+      <select class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" name="city">
+          <option selected="true" disabled="disabled">Location</option>
+          {% for city in city_search %}
+            <option value="{{city}}">{{city}}</option>
+          {% endfor %}
+      </select> </div>
+  <div class="flex items-start mb-6">
+    <div class="form-group">
+      <button class="w3-black w3-button w3-round w3-block">
+          <i class="fa fa-search"></i> Search
+      </button>
+  </div>
+  </form>
+  <!-- product-->
+
+</div>   
+
+<div class="w3-hide-large w3-hide-medium">
+  <div class="w3-row w3-container py-4">
+
+    <div class="w3-col s4  w3-center">
+      <p> 
+        <a href="/marbles/marblesearch?model=Painter">
+          <div class=" w3-center" style="width: 6em;">
+            <img class="card-img-top " src="https://i.postimg.cc/Pf7SjmS9/HOMEnnn-removebg-preview-2.png" alt="Card image cap">
+          </div>
+        </a>
+      </p>
+    </div>
+
+    <div class="w3-col s4 w3-center">
+      <p> <a href="/marbles/marblesearch?model=Electrician">
+        <div class=" w3-center" style="width: 6em;">
+          <img class="card-img-top " src="https://i.postimg.cc/W175kx7q/mmm-removebg-preview-3.png" alt="Card image cap">
+        </div>
+      </a></p>
+    </div>
+    <div class="w3-col s4 w3-center">
+      <p>
+        <a href="">
+          <div class=" w3-center" style="width: 6em;">
+            <img class="card-img-top " src="https://i.postimg.cc/7PKD3Yxw/hhfgihdfg-dfgd.png" alt="Card image cap">
+          </div>
+        </a>
+      </p>
+    </div>
+  </div>
+  <br>
+
+
+  <div class="py-2 swiffy-slider slider-item-ratio slider-item-ratio-16x9 slider-nav-animation slider-nav-animation-fadein slider-nav-autoplay slider-nav-autopause" id="swiffy-animation">
+    <ul class="slider-container" id="container1">
+        <li id="slide1" class=""><img src="https://i.postimg.cc/66zbNmHz/tttt.png" alt="..." loading="lazy"></li>
+        <li id="slide2" class=""><img src="https://i.postimg.cc/Kj4PbJzs/hhhg.png" alt="..." loading="lazy"></li>
+        <li id="slide3" class=""><img src="https://i.postimg.cc/dtb2MRK4/nnnnsdadasdasdasd.png" alt="..." loading="lazy"></li>
+    </ul>
+
+    <button type="button" class="slider-nav" aria-label="Go to previous"></button>
+    <button type="button" class="slider-nav slider-nav-next" aria-label="Go to next"></button>
+
+    <div class="slider-indicators">
+        <button aria-label="Go to slide" class=""></button>
+        <button aria-label="Go to slide" class=""></button>
+        <button aria-label="Go to slide" class=""></button>
+        <button aria-label="Go to slide" class="active"></button>
+        <button aria-label="Go to slide" class=""></button>
+        <button aria-label="Go to slide" class=""></button>
+    </div>
+</div>
+</div>
+    <!--bigscreen-->
+      <div class="w3-col   w3-hide-small w3-center w3-hide-large w3-hide-medium">
+        <p>
+            <div class="">
+                <div class="mx-auto max-w-7xl px-4 sm:px-2 lg:px-2">
+                  <div class="mx-auto max-w-2xl  sm:py-2 lg:max-w-none lg:py-2">
+                    <h2 class="text-2xl font-bold text-gray-900"></h2>
+              
+                    <div class="mt-6 space-y-12 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+                        {% for marble in marbles %}
+                        <div class="group relative">
+                        <div class="relative h-80 w-full overflow-hidden rounded-lg bg-white group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
+                          <img src="{{marble.marble_photo.url}}" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="h-full w-full object-cover object-center">
+                        </div>
+                        <h3 class="mt-6 text-black font-bold ">
+                            <h1 class="title">
+                                <a href="{% url 'marble_detail' marble.id %}">{{marble.marble_title}}</a>
+                            </h1>
+                        </h3>
+                        <div class="w3-row py-2">
+                            <div class="w3-col s12  ">
+                                <button type="button" class="px-2  rounded-lg px-12 py-2 text-xs font-medium text-center text-black bg-blue-50 "><b>{{marble.condition}}</b></button>
+                                </div>
+                          
+                          </div>
+                      </div>
+              
+                      {% endfor %}
+                    </div>
+                  </div>
+              </div>
+              </div>
+        </p>
+      </div>
+
+  </div>
+  <br><br><br><br>
+         
+
+<!-- Featured car end -->
+  <!--bigscreen-->
+</div>
+
+
+
+<!-- Intro section end -->
+<div class="w3-hide-small w3-container w3-row w3-row-padding">
+<div class="w3-row w3-container">
+  
+   <div class="w3-col s4 w3-center">
+     <p>    <div class="py-1" style="width: 25.5rem;">
+       <img class="card-img-top " src="https://i.postimg.cc/66zbNmHz/tttt.png" alt="Card image cap">
+     </div></p>
+   </div>
+   <div class="w3-col s4  w3-center">
+     <p>   
+        <div class="py-1" style="width: 25.5rem;">
+       <img class="card-img-top " src="https://i.postimg.cc/Kj4PbJzs/hhhg.png" alt="Card image cap">
+     </div></p>
+   </div>
+   <div class="w3-col s4  w3-center">
+     <p>   
+        <div class="py-1" style="width: 25.5rem;">
+       <img class="card-img-top " src="https://i.postimg.cc/dtb2MRK4/nnnnsdadasdasdasd.png" alt="Card image cap">
+     </div></p>
+   </div>
+ </div>
+
+<br><br>
+
+<div class="w3-hide-small w3-hide-medium w3-hide-large swiffy-slider slider-item-show4 slider-nav-outside slider-nav-dark slider-nav-sm slider-nav-visible slider-nav-page slider-item-snapstart slider-nav-autoplay slider-nav-autopause slider-item-ratio slider-item-ratio-contain slider-item-ratio-32x9 bg-white shadow-lg py-3 py-lg-4" data-slider-nav-autoplay-interval="2000">
+<div class="slider-container">
+  <div><img src="../assets/img/brandlogos/css-3.svg" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/DWLogoColor_sm.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/javascript-1.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/bootstrap-5.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/eslint-1.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/github-2.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/html-1.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/svelte-wordmark-1.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/next-js.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/webpack-icon.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/react-2.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/star-wars-4.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/vue-9.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/meteor-5.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/nuxt-2.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/nodejs-1.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/prettier-2.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/angular-icon-1.svg" loading="lazy" alt="..."></div>
+  <div><img src="../assets/img/brandlogos/github-icon.svg" loading="lazy" alt="..."></div>
+</div>
+
+<button type="button" class="slider-nav" aria-label="Go left"></button>
+<button type="button" class="slider-nav slider-nav-next" aria-label="Go left"></button>
+
+</div>
+
+
+
+<script>
+  // Automatic Slideshow - change image every 4 seconds
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000);    
+  }
+  
+  // Used to toggle the menu on small screens when clicking on the menu button
+  function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  var modal = document.getElementById('ticketModal');
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+
+{% endblock %}
